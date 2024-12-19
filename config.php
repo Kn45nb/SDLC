@@ -1,6 +1,6 @@
 <?php
 $servername = "localhost";
-$username = "rootroot";
+$username = "root";
 $password = "";
 $database = "nei"; // The database name
 
