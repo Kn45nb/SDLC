@@ -2,7 +2,7 @@
 $host = 'localhost'; // Máy chủ
 $user = 'root';      // Tên người dùng MySQL
 $pass = '';          // Mật khẩu MySQL
-$db = 'school_system'; // Tên cơ sở dữ liệu
+$db = 'nei';         // Tên cơ sở dữ liệu đã thay đổi
 
 // Kết nối
 $conn = new mysqli($host, $user, $pass, $db);
