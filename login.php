@@ -36,28 +36,24 @@ $conn->close();
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
-    <style>
-        body { font-family: Arial, sans-serif; background-color: #f5f5f5; }
-        .container { max-width: 300px; margin: 0 auto; padding: 20px; background-color: #fff; border-radius: 5px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }
-        .error { color: red; }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
+    <div class="login-container">
         <h2>Login</h2>
         <?php if ($error): ?>
             <p class="error"><?php echo $error; ?></p>
         <?php endif; ?>
         <form action="" method="post">
-            <div>
+            <div class="input-group">
                 <label for="username">Username:</label>
                 <input type="text" name="username" id="username" required>
             </div>
-            <div>
+            <div class="input-group">
                 <label for="password">Password:</label>
                 <input type="password" name="password" id="password" required>
             </div>
-            <div>
+            <div class="input-group">
                 <input type="submit" value="Login">
             </div>
         </form>
