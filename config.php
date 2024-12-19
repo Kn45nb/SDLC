@@ -1,14 +1,13 @@
 <?php
 $servername = "localhost";
-$username = "root";
+$username = "rootroot";
 $password = "";
-$dbname = "nei";
+$database = "nei"; // The database name
 
-// Tạo kết nối
-$conn = new mysqli($servername, $username, $password, $dbname);
+$conn = new mysqli($servername, $username, $password, $database);
 
-// Kiểm tra kết nối
+// Check connection
 if ($conn->connect_error) {
-    die("Kết nối thất bại: " . $conn->connect_error);
+    die("Connection failed: " . $conn->connect_error);
 }
 ?>
