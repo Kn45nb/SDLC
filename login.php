@@ -8,7 +8,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-    // Prepared statement to prevent SQL injection
     $sql = "SELECT * FROM administrator WHERE username = ? AND password = ?";
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("ss", $username, $password);
@@ -16,7 +15,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $result = $stmt->get_result();
 
     if ($result->num_rows > 0) {
-        // Lưu phiên làm việc
         $user = $result->fetch_assoc();
         $_SESSION['user'] = $user;
         header("Location: view_grades.php");
